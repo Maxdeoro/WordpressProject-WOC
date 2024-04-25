@@ -205,52 +205,81 @@
 
         <div class="aboutus" id="aboutus">
             <div class="container">
-                <h1 class="title">Наша история</h1>
+                <h1 class="title"><?php the_field('history_title') ?></h1>
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="subtitle">
-                            Все начиналось с желания
-                        </div>
-                        <div class="aboutus__text">
+                        <!-- <div class="subtitle"> -->
+                            <!-- Все начиналось с желания -->
+                        <?php
+                            // vars
+                            $history_block_1 = get_field("history_block_1");
+                            if( $history_block_1 ): ?>
+                            <div class="subtitle"><?php echo $history_block_1["history_block_1_title"]; ?></div>
+                            <div class="aboutus__text"><?php echo $history_block_1["history_block_1_descr"]; ?></div>
+                            <?php endif; 
+                        ?>
+                        <!-- </div> -->
+                        <!-- <div class="aboutus__text">
                             Желания сделать как можно больше детей счастливыми. Именно с этой идеи все и зарождалось.
                             <br><br>
                             Первые игрушки, сделанные вручную были классическими плюшевыми медведями, которые разошлись настолько быстро, что нас завалили заказами на несколько месяцев вперед. Именно в то время мы поняли, что идем правильным путем, вкладывая все силы и эмоции в наши игрушки.
-                        </div>
+                        </div> -->
                     </div>
                     <div class="col-lg-6">
-                        <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/about_1.jpg" alt="мир детства">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-6">
-                        <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/about_2.jpg" alt="мир детства">
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="subtitle">
-                            Главное - качество
-                        </div>
-                        <div class="aboutus__text">
-                            Мы делали их вручную, из лучших материалов и не жалея времени. Но мы росли и наш ассортимент расширился и фабричными изделиями.
-                            <br><br>
-                            Выбирая нас, вы можете быть уверены, что мы всегда следим за качеством закупок и никогда не предоставим вам опасный или некачественный товар.
-                        </div>
+                        <!-- <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/about_1.jpg" alt="мир детства"> -->
+                        <?php
+                            // vars
+                            $history_block_1 = get_field("history_block_1");
+                            if( $history_block_1 ): ?>
+                            <?php 
+                                $image1 = $history_block_1["history_block_1_image"]; ?>
+                            <img class="aboutus__img" src="<?php echo $image1 ?>" alt="history image">
+                            <?php endif; 
+                        ?>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="subtitle">
-                            Современные технологии
-                        </div>
-                        <div class="aboutus__text">
-                            И даже спустя столько лет мы продолжаем создавать игрушки вручную. Как самые простые, так и те, что идут в ногу со временем. Добавляя электроники и оживляя лучших друзей ребятишек, мы всегда следим за качеством и безопасностью. Каждая отдельная игрушка проходит индивидуальный контроль по всем необходимым стандартам.
-                            <br><br>
-                            Ведь счастливое лицо ребенка - это лучшая награда для нас!
-                        </div>
+                        <?php
+                            $history_block_2 = get_field("history_block_2");
+                            if( $history_block_2 ): ?>
+                            <?php 
+                                $image2 = $history_block_2["history_block_2_image"]; ?>
+                            <img class="aboutus__img" src="<?php echo $image2 ?>" alt="history image">
+                            <?php endif; 
+                        ?>
                     </div>
                     <div class="col-lg-6">
-                        <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/about_3.jpg" alt="мир детства">
+                        <?php
+                            $history_block_2 = get_field("history_block_2");
+                            if( $history_block_2 ): ?>
+                            <div class="subtitle"><?php echo $history_block_2["history_block_2_title"]; ?></div>
+                            <div class="aboutus__text"><?php echo $history_block_2["history_block_2_descr"]; ?></div>
+                            <?php endif; 
+                        ?>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <?php
+                            $history_block_3 = get_field("history_block_3");
+                            if( $history_block_3 ): ?>
+                            <div class="subtitle"><?php echo $history_block_3["history_block_3_title"]; ?></div>
+                            <div class="aboutus__text"><?php echo $history_block_3["history_block_3_descr"]; ?></div>
+                            <?php endif; 
+                        ?>
+                    </div>
+                    <div class="col-lg-6">
+                        <?php
+                            $history_block_3 = get_field("history_block_3");
+                            if( $history_block_3 ): ?>
+                            <?php 
+                                $image3 = $history_block_3["history_block_3_image"]; ?>
+                            <img class="aboutus__img" src="<?php echo $image3 ?>" alt="history image">
+                            <?php endif; 
+                        ?>
                     </div>
                 </div>
             </div>
