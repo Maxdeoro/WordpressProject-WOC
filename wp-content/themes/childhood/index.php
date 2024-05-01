@@ -286,19 +286,31 @@
         </div>
 
         <div class="contacts" id="contacts">
-            <h1 class="title">Где нас найти</h1>
+            <h1 class="title"><?php the_field('find_us_title'); ?></h1>
+            <!-- <h1 class="title">Где нас найти</h1> -->
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="contacts__descr underlined">
-                            Мы находимся в Москве, метро "Парк победы", в деловом центре "Парк победы", второй этаж
+                            We are located in Montevideo, metro "Park Victory," in the business center "Victory Park," the second floor
                             <br> <br>
-                            по адресу ул. Василисы Кожиной, 1
+                            <?php the_field('address'); ?>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div id="map" class="contacts__map">
+                                <!-- using plugin wp go maps with openLayersMap -->
+                        <div class="contacts__map">
+                                <?php echo do_shortcode('[wpgmza id="1"]'); ?>
                         </div>
+                                    <!-- using acf-map  -->
+                        <!-- <div class="contacts__map acf-map"></div> -->
+                                     <!-- using iframe -->
+                        <!-- <div id="map" class="contacts__map"></div> -->
+                        <!-- <div class="mapouter">
+                            <div class="gmap_canvas">
+                                <iframe width="600" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=montevideo&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="row">
