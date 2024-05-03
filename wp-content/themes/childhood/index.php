@@ -298,14 +298,16 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                                <!-- using plugin wp go maps with openLayersMap -->
-                        <div class="contacts__map">
-                                <?php echo do_shortcode('[wpgmza id="1"]'); ?>
-                        </div>
-                                    <!-- using acf-map  -->
-                        <!-- <div class="contacts__map acf-map"></div> -->
-                                     <!-- using iframe -->
                         <!-- <div id="map" class="contacts__map"></div> -->
+
+                                <!-- osm plugin map -->
+                        <div class="contacts__map">
+                            <?php 
+                            echo do_shortcode('[osm_map_v3 map_center="-34.8001,-56.1491" zoom="13.0" width="95%" height="380" post_markers="1" control="mouseposition"]'); 
+                            ?>
+                        </div>
+
+                                <!-- iframe map -->
                         <!-- <div class="mapouter">
                             <div class="gmap_canvas">
                                 <iframe width="600" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=montevideo&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
