@@ -302,7 +302,9 @@
 
                                 <!-- osm plugin map -->
                         <div class="contacts__map">
-                            <?php echo do_shortcode('[osm_map_v3 map_center="-34.7921,-56.1478" zoom="12.0" width="95%" height="380" post_markers="1" ]'); ?>
+                            <?php 
+                            echo do_shortcode('[osm_map_v3 map_center="-34.8001,-56.1491" zoom="13.0" width="95%" height="380" post_markers="1" control="mouseposition"]'); 
+                            ?>
                         </div>
 
                                 <!-- iframe map -->
